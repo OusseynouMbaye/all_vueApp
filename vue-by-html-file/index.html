@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <div>
+      {{ title.toUpperCase() }}
+    </div>
+    <div>
+      <h2> Learn V-model</h2>
+      <input type="text" v-model="name">
+      <div>
+        nom: {{name}}
+      </div>
+    </div>
+    <div>
+      <h2>Learn V-if</h2>
+      <div v-if="montant > 100">
+        Livraison gratuite!
+        <div>
+          <div v-else-if="montant > 50">
+            Livraison 9.95$
+          </div>
+          <div v-else>
+            Livraison 19.95$
+          </div>
+        </div>
+        <div>
+          <div v-show="isError">
+            {{ errorMessage }}
+          </div>
+        </div>
+      </div>
+      <script src="https://unpkg.com/vue@next"></script>
+      <script src="./app.js"></script>
+</body>
+</html>
